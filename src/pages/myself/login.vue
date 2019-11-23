@@ -33,7 +33,7 @@
             </div>
             <div class="input_phone">
               <input type="text" maxlength="11" placeholder="请输入正确手机号" v-model="phoneInput">
-              <div class="register_yzm" 
+              <div class="register_yzm"
                 @click="yzphone"
                 :class="isYzActive?'yzActive':''">
                 验证
@@ -136,7 +136,7 @@ export default {
           storage.setItem("user", this.phoneInput)
           console.log(storage.getItem('user'))
         })
-      
+
       } else {
         MessageBox.alert('手机号或验证输入错误！').then(action => {
           this.phoneInput = " "
@@ -146,7 +146,7 @@ export default {
 
     }
   },
-  
+
 }
 </script>
 
@@ -164,8 +164,8 @@ export default {
     opacity 1
   // 3、fade-enter 进入过渡的开始状态，元素被插入的生效，只应用一帧后失效
   // 4、fade-leave
-  // 这里就是从过渡开始到结束的 过渡状态声明最佳时间 
-  // opacity 在过渡的开始离开的时候透明度都为0 即不显示  
+  // 这里就是从过渡开始到结束的 过渡状态声明最佳时间
+  // opacity 在过渡的开始离开的时候透明度都为0 即不显示
   // y 100%就是以左上角的为坐标点 最下面的位置开始 过渡 代表的是进入的位置
   &.fade-enter, &.fade-leave-active
     transform translate3d(0, 100%,0)
